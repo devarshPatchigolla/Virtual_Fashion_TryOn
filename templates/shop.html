@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <link rel="stylesheet" href="static/style.css" >
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="/static/images/logo.png" height="90px" width="90px" class="logo" alt="LOGO"</a>
+        <div>
+           <ul id="navbar">
+                <li><a  href="/index">Home</a></li>
+                <li><a class="active" href="/shop1">Shop</a></li>
+               <li><a href="/about">About</a></li>
+               <li><a href="/contact">Contact</a></li>
+               <li><a href="/login">Login</a></li>
+               <li id="lg-bag"><a href="/cart"><i class="far fa-shopping-bag"></i></a></li>
+               <a href="#" id="close"><i class="far fa-times"></i></a>
+           
+           </ul>
+           
+        </div>
+        <div id="mobile">
+           <a href="/cart"><i class="far fa-shopping-bag"></i></a>
+           <i id="bar" class="fas fa-outdent"></i>
+
+        </div>
+        
+   </section>
+    <section id="page-header" >
+        
+        
+    
+    </section>
+    
+    <section id="product1" class="section-p1">
+        
+        <div class="pro-container">
+            {% for product in products %}
+            <div class="pro" onclick="window.location.href='sproductv2?id={{product[0]}}';">
+                <img src="/static/images/product/{{product[2]}}" alt="" height="">
+                <div class="des">
+                    <span>PowerLook</span>
+                    <h5>Men Slogan</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                     </div>
+                     <h4>${{product[3]}}</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            {% endfor %}            
+           
+
+        </div>
+
+    </section>
+    <section id="pagination" class="section-p1">
+        <a href="/shop">1</a>
+        <a href="/shop2">2</a>
+        <a href="/shop3">3</a>
+        <a href="/shop4">4</a>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign up for Virtu Style</h4>
+            <p>Get E-mail Updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <a href="login.html"><button class="normal">Sign Up</button></a>
+
+        </div>
+
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>  Kommadi, Visakhapatnam</p>
+            <p><strong>Phone:</strong>  08672-214352</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+
+            </div>
+           
+       
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="/about">About us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & conditions</a>
+            <a href="/contact">Contact us</a>
+        
+         </div>
+         <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="#">Help</a>
+            
+        </div>
+       
+        <div class="copyright">
+            <br><br><br><br><p>© 2024 Virtu Style. All rights reserved.</p>
+
+        </div>
+       
+    </footer>
+
+
+
+
+
+    <script src="/static/script.js"></script>
+    
+</body>
+</html>

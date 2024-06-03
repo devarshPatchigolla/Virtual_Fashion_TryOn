@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css" >
+</head>
+<body>
+    <section id="header">
+         <a href="#"><img src="/static/images/logo.png" height="70px" width="70px" class="logo" alt="LOGO"</a>
+         <div>
+            <ul id="navbar">
+                 <li><a href="/index">Home</a></li>
+                 <li><a class="active"  href="/shop">Shop</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/login">Login</a></li>
+                <li id="lg-bag"><a href="/cart"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            
+                
+            </ul>
+            
+         </div>
+         <div id="mobile">
+            <a href="/cart"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+
+         </div>
+         
+    </section>
+
+
+
+    <h3>Cart</h3>
+    <section>
+        <table class="table table-success">
+            <tr>
+                <td>id</td><td>userid</td><td>productid</td>
+                <td>quantity</td><td>date</td><td>userid</td>
+                <td>product desc</td><td>..</td><td>price</td>
+            </tr>
+            {% if cartitems %}
+        {% for cartitem in cartitems %}
+            <tr>
+                <td>{{cartitem[0]}}</td><td>{{cartitem[1]}}</td><td>{{cartitem[2]}}</td>
+                <td>{{cartitem[3]}}</td><td>{{cartitem[4]}}</td><td>{{cartitem[5]}}</td>
+                <td>{{cartitem[10]}}</td><td>{{cartitem[11]}}</td><td>{{cartitem[12]}}</td>
+            </tr>
+        {% endfor %}
+            {% endif %}
+        </table>
+    </section>
+
+
+
+
+
+
+    
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign up for Virtu Style</h4>
+            <p>Get E-mail Updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal" onsubmit="login.html">Sign Up</button>
+
+        </div>
+
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>  Kommadi, Visakhapatnam</p>
+            <p><strong>Phone:</strong>  08672-214352</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <h3><div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div> </h3>
+
+            </div>
+           
+       
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & conditions</a>
+            <a href="#">Contact us</a>
+        
+         </div>
+         <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track my order</a>
+            <a href="#">Help</a>
+            
+        </div>
+       
+        <div class="copyright">
+            <br><br><br><br><p>© 2024 Virtu Style. All rights reserved.</p>
+
+        </div>
+       
+    </footer>
+    <script>
+        var MainImg=document.getElementById("MainImg");
+        var SmallImg=document.getElementsByClassName("small-img");
+
+        SmallImg[0].onclick= function(){
+            MainImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick= function(){
+            MainImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick= function(){
+            MainImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick= function(){
+            MainImg.src = SmallImg[3].src;
+        }
+    </script>
+
+
+
+
+    <script src="/static/script.js"></script>
+    
+</body>
+</html>
